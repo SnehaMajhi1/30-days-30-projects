@@ -1,83 +1,253 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+
+* {
     margin: 0;
     padding: 0;
-}
-.container{
-    max-width: 80vw;
-}
-.navbar{
-    display: flex;
-    height: 67px;
-     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
 
-.navbar li{
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* Main container */
+
+.container {
+    max-width: 80vw;
+}
+
+
+/* Navigation */
+
+.navbar {
+    height: 67px;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.navbar li {
     list-style: none;
     margin: 0 12px;
 }
-.topleft{
-    width: 50%;
-}
-.topright{
-    width: 50%;
-}
-.section1{
-     max-height: 100vh;
-}
 
-.section1 h1{
-    font-size: 2rem;
-}
 
-.logo{
+.logo {
     font-size: 1.3rem;
 }
 
-.dumbellimg{
+
+/* Hero Section */
+
+.section1 {
+    color: #5a1e17;
+}
+
+.section1 .flex {
+    min-height: calc(100vh - 67px);
+}
+
+.topleft {
+    width: 50%;
+}
+
+
+.topright {
+    width: 50%;
+}
+
+
+.section1 h1 {
+    font-size: 2rem;
+    color: #6f1f16;
+}
+
+
+.dumbellimg {
     width: 289px;
 }
 
-.topright .gymimg{
- width: 466px;
+
+.topright .gymimg {
+    width: 466px;
+    max-width: 100%;
 }
 
-.section2{
-    padding-left: 63px;
-    padding-right: 63px;
+
+/* Pricing Section */
+
+.section2 {
+    padding: 73px 0;
 }
-.section2 h1{
+
+
+.section2 h1 {
     font-size: 2.5rem;
 }
 
-.section2 p{
+
+.section2 p {
     padding: 0 8vw;
     text-align: center;
 }
 
-.box{
+
+/* Pricing Boxes */
+
+.boxes {
+    flex-wrap: wrap;
+}
+
+
+.box {
     margin: 12px 22px;
-    padding:8px 0;
+    padding: 8px 0;
     min-width: 20vw;
-    border: 2px solid rgb(120, 54, 16) ;
+
+    border: 2px solid rgb(120, 54, 16);
     text-align: center;
     border-radius: 8px;
 }
-.box h2{
+
+
+.box h2 {
     font-size: 2rem;
     padding: 15px 0;
 }
 
-.highlighted{
+
+.highlighted {
     font-size: 1.2rem;
     font-weight: bolder;
 }
-.box ul{
+
+
+.box ul {
     list-style-type: none;
 }
-.box ul{
+
+
+.box ul li {
     margin: 12px 2px;
 }
 
 
+/* Compare Plans */
+
+.section3 {
+    padding: 73px 0;
+}
+
+
+.section3 h1 {
+    font-size: 2.3rem;
+}
+
+
+.plantable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section3 table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 140px;
+    border-collapse: collapse;
+}
+
+
+.section3 table th {
+    width: 23vw;
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+}
+
+
+.section3 table td {
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 23px;
+    text-align: center;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        max-width: 90vw;
+    }
+
+    .section1 > div {
+        height: auto;
+        min-height: calc(100vh - 67px);
+    }
+
+    .topleft,
+    .topright {
+        width: 50%;
+    }
+
+    .gymimg {
+        max-width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar li {
+        margin: 5px;
+    }
+
+    .section1 > div {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .topleft,
+    .topright {
+        width: 100%;
+    }
+
+    .topright {
+        margin-top: 30px;
+    }
+
+    .section2,
+    .section3 {
+        padding: 50px 0;
+    }
+
+    .box {
+        min-width: 70vw;
+    }
+
+}

@@ -65,7 +65,7 @@ padding-right: 13px;
     background-color: rgb(227 74 56);
 }
 .overflow-x-hidden{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .text-center{
