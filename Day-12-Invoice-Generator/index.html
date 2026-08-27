@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <div class="container">
+        <h2>Invoice Generator</h2>
+
+
+        <!-- Details of the Client -->
+         <div>
+            <input type="text" id="clientName" placeholder="Client Name">
+            <input type="text" id="clientAddress" placeholder="Client Address">
+            <input type="date" id="invoiceDate">
+         </div>
+
+         <!-- Add Items -->
+
+         <div>
+            <input type="text"id="itemName"placeholder="Item Name">
+            <input type="number"id="itemQuantity"placeholder="Quantity">
+            <input type="number"id="itemPrice"placeholder="Price">
+            <button onclick="addItem()">Add Items</button>
+         </div>
+
+         <!-- Table -->
+          <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceItems"></tbody>
+          </table>
+     
+         <div class="total-section">
+            <h3>Grand Total: ₹ <span id="grandTotal">0</span></h3>
+         </div>
+        <button class="print-btn"onclick="printInvoice()">Print Invoice</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
